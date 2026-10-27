@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cloud Computing Practice - Salsa</title>
+    <title>Cloud Computing Practice - Pink Cat Theme</title>
     <style>
         * {
             margin: 0;
@@ -12,8 +12,8 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         body {
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            color: #f8fafc;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #feada6 100%);
+            color: #4a4a4a;
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -21,22 +21,31 @@
             padding: 20px;
         }
         .container {
-            background: rgba(30, 41, 59, 0.7);
+            background: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 16px;
+            border: 2px solid #ffb6c1;
+            border-radius: 24px;
             padding: 40px;
-            max-width: 500px;
+            max-width: 480px;
             width: 100%;
             text-align: center;
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 15px 30px rgba(255, 105, 180, 0.2);
+        }
+        .cat-avatar {
+            font-size: 64px;
+            margin-bottom: 10px;
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
         }
         .badge {
-            background: #38bdf8;
-            color: #0f172a;
+            background: #ff69b4;
+            color: #ffffff;
             font-size: 12px;
             font-weight: bold;
-            padding: 6px 12px;
+            padding: 6px 16px;
             border-radius: 20px;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -46,34 +55,34 @@
         h1 {
             font-size: 24px;
             margin-bottom: 10px;
-            color: #ffffff;
+            color: #d63384;
         }
         p {
-            color: #94a3b8;
+            color: #6c757d;
             font-size: 14px;
             line-height: 1.6;
             margin-bottom: 20px;
         }
         .status-box {
-            background: #090d16;
-            border-radius: 8px;
+            background: #fff0f5;
+            border-radius: 12px;
             padding: 15px;
             margin-bottom: 20px;
-            border-left: 4px solid #38bdf8;
+            border-left: 4px solid #ff69b4;
             text-align: left;
         }
         .status-box p {
             margin: 0;
             font-size: 13px;
-            color: #e2e8f0;
+            color: #495057;
             line-height: 1.8;
         }
         .btn {
-            background: linear-gradient(90deg, #38bdf8 0%, #818cf8 100%);
+            background: linear-gradient(90deg, #ff69b4 0%, #ff8da1 100%);
             color: #ffffff;
             border: none;
             padding: 12px 24px;
-            border-radius: 8px;
+            border-radius: 12px;
             font-weight: 600;
             cursor: pointer;
             transition: transform 0.2s, box-shadow 0.2s;
@@ -81,22 +90,23 @@
         }
         .btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 15px -3px rgba(56, 189, 248, 0.4);
+            box-shadow: 0 10px 15px -3px rgba(255, 105, 180, 0.4);
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <span class="badge">Praktikum Cloud Computing</span>
+        <div class="cat-avatar">🐱✨</div>
+        <span class="badge">Pink Cloud Server</span>
         <h1>Web Server Deployment</h1>
-        <p>Website ini berhasil di-deploy menggunakan platform Vercel untuk memenuhi tugas Modul 01.</p>
+        <p>Website ini berhasil di-deploy menggunakan platform Vercel dengan tema serba pink dan kucing imut! 🐾</p>
         
         <div class="status-box">
-            <p>🌐 <strong>Status Host:</strong> Active / Online</p>
+            <p>🐾 <strong>Status Host:</strong> Active & Meow-velous!</p>
             <p>🕒 <strong>Waktu Server:</strong> <span id="time">-</span></p>
         </div>
 
-        <button class="btn" onclick="cekStatus()">Cek Koneksi Server</button>
+        <button class="btn" onclick="cekStatus()">Sapa Kucing Server 🐾</button>
     </div>
 
     <script>
@@ -106,7 +116,7 @@
         }
 
         function cekStatus() {
-            alert("Koneksi berhasil! Website berjalan dengan lancar.");
+            alert("Meow! 🐱 Website kamu sudah aktif dan berjalan lancar di Vercel!");
         }
 
         setInterval(updateTime, 1000);
